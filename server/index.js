@@ -25,14 +25,14 @@ app.get('/read', async (req,res) => { /* This Route reads data from the data bas
     })
 })
 
-app.delete('/delete/:id', async (req,res) => {
+app.delete('/delete/:id', async (req,res) => { /* Deletes the item based on their id number which we got from the front end*/
     const id = req.params.id;
     
     await FoodModel.findByIdAndRemove(id).exec();
     res.send('Deleted');
 });
 
-app.put('/update', async (req,res) => {
+app.put('/update', async (req,res) => { /* Finds the id of the item in the DB then updates and saves it */
     const newFoodName = req.body.newFoodName;
     const id = req.body.id;
 

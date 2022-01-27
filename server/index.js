@@ -10,7 +10,7 @@ app.use(express.json()); /* Get front end information in json format */
 app.use(cors()); /*Communicates with selfmade API */
 
 mongoose.connect( /* Connects to the Mongo Database */
-    'mongodb+srv://newuser:h6Endlaay3ycWsGi@crud.e4cku.mongodb.net/food?retryWrites=true&w=majority', {
+    'mongodb+srv://newuser:<Password>i@crud.e4cku.mongodb.net/food?retryWrites=true&w=majority', {
     useNewUrlParser: true,
 });
 
